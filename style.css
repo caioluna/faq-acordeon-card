@@ -1,0 +1,80 @@
+/* COLORS */
+
+:root {
+    /* Background gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --light-purple: hsl(240, 73%, 65%);
+
+    /* Text */
+
+    --dark-blue: hsl(238, 29%, 16%);
+    --soft-orange: hsl(14, 88%, 65%);
+
+    --darker-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* Divider */
+
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(var(--soft-violet), var(--light-purple));
+}
+
+a {
+    text-decoration: none;
+}
+
+/* MAIN */
+
+.faq-card {
+    width: 375px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.faq-card h1 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--dark-blue);
+}
+
+.section-wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.faq-item h2 {
+    color: var(--darker-grayish-blue);
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+h2.active {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.faq-item img {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.faq-item h2:hover {
+    color: var(--soft-orange);
+}
+
+.faq-item p {
+    color: var(--dark-grayish-blue);    
+}
