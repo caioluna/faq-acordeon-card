@@ -40,37 +40,48 @@ body {
 
 /* MAIN */
 
-main {
+.faq-container {
     background-color: #fff;
     border-radius: 25px;
     width: 375px;
-    /* overflow: hidden; */
+    display: flex;
 
-    padding: 20px;
     position: relative;
+    margin: 0;
 }
 
-main > img {
+.faq-container::before {
+    display: block;
+    content: url("./images/illustration-woman-online-mobile.svg");
+    text-align: center;
+    top: -105px;
     position: absolute;
-    top: -18%;
     left: -25px;
-    right: 0px;
-    margin: 0 auto;
+    right: 0;
 }
 
-.pattern-shadow {
+.faq-container::after {
+    display: block;
+    content: url("./images/bg-pattern-mobile.svg");
     position: absolute;
-    left: 0px;
-    right: 0px;
     top: 10px;
-    margin: 0 auto;
+    left: 68px;
 }
 
-main h1 {
+.faq-container img.img-desktop {
+    display: none;
+}
+
+.faq-container h1 {
     font-size: 32px;
     text-align: center;
     margin-top: 130px;
     margin-bottom: 40px;
+    color: var(--dark-blue);
+}
+
+.accordion {
+    padding: 20px;
 }
 
 .accordion > div {
@@ -130,4 +141,57 @@ main h1 {
 
 .accordion__input:checked ~ .accordion__label::after {
     transform: translateY(-50%) rotate(.5turn);
+}
+
+@media (min-width: 1024px) {
+
+    .faq-container {
+        width: min(1000px, 90%);
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .faq-container::before,
+    .accordion {
+        flex: 1;
+    }
+    
+    .faq-container::before {
+        display: block;
+        position: relative;
+        flex: 1;
+        content: "";
+        top: -50px;
+        transform: translateY(50px);
+        margin-left: 25px;
+
+        background: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg");
+        background-size: 470px, 860px;
+        background-position: -60px 90px, -448px -204px;
+        background-repeat: no-repeat;
+    }
+    
+    .faq-container::after {
+        content: url("./images/illustration-box-desktop.svg");
+        position: absolute;
+        left: -90px;
+        top: 280px;
+        transform: translateY(-50px);
+    }
+
+    .faq-container h1 {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    
+    .accordion {
+        padding: 60px;
+    }
+
+    .accordion div {
+        margin-left: 0;
+    }
+
+
 }
