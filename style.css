@@ -165,7 +165,7 @@ body {
         transform: translateY(50px);
         margin-left: 25px;
 
-        background: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg");
+        background: url("./images/illustration-woman-online-desktop.svg"), url("./images/bg-pattern-desktop.svg");
         background-size: 470px, 860px;
         background-position: -60px 90px, -448px -204px;
         background-repeat: no-repeat;
